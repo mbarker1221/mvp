@@ -1,74 +1,98 @@
 # mvp
 
-sign up / sign on page:
+SIGN UP/SIGN ON/LANDING PAGE:
 ----------------------
 
-    sign up:
       short description of the site and instructions to sign up/sign in below
-     
-      user enters username ------- valid  -------- user enters password ------- valid --------- home page
-                          
-                          
-          user enters username   ------- username no entry ------ error and show message to enter a username
-          user enters username  ------- username does not meet criteria ------- error and show message to enter a username
-                          
-          user enters password ------- password no entry ------- error and show message to enter password
-          user enters password ------- password does not meet criteria -------- error and show message to enter password
-          
-          
-    sign on: 
-          user enters username ------- valid  -------- user enters password ------- valid --------- home page
-          
-          user enters username   ------- username no entry ------ error and show message to enter a username
-          user enters username  ------- username not found ------- error and show message to enter a username
-                          
-          user enters password ------- password no entry ------- error and show message to enter password
-          user enters password ------- password not found -------- error and show message to enter password
-          
-          
-          
-          
-home page:  
----------
-                 find shows:
-                      http://eventful.com/events?q=music
-                     search events by artist  http://eventful.com/events?q=music&
-                     search events by date  http://eventful.com/events?q=music&l=San+Diego&t=9+December+2006
-                     search events by location (zip code or city)  http://eventful.com/events?q=music&l=San+Diego
-                     search similar events
-                     
-                  want to connect to other people?
-                  
-                   search users by name, saved events, groups user is a member of
-                      keyword:  http://api.eventful.com/rest/users/search?...&keywords=eventor
-                      username: http://api.eventful.com/rest/users/get?...&id=mruser
-                      event attending:  
-                        matches any user marked as "I'm going" to the event. For instance, going:chris_radcliff 
-                        will find events attended by the user chris_radcliff.
-                     
-                     
-                  click here to see/edit your events, groups, and profile --------- profile page
-                     
-                     
-                     
-profile page:
------------         
-                using oAuth key (which i have) users to see their eventful calendar and
-                           edit their eventful profile through my app 
 
-        1.    see calendar of events user plans on attending/has attended  
-                http://api.eventful.com/rest/users/calendars/list?app_key=...&owner=eventor
-        2.    see user's groups
-                http://api.eventful.com/rest/users/groups/list?...&id=
+    CONTINUE AS GUEST ————————————————————————————————— direct to home page                    
+                     
+    SIGN UP:
+  
+        user enters username   ------- username no entry ------ error and show message to enter a username
+        user enters username  ------- username does not meet criteria ------- error and show message to enter a 																                            valid username
+                      
+        user enters password ------- password no entry ------- error and show message to enter password
+        user enters password ------- password does not meet criteria -------- error and show message to enter 
+                                                                                a valid password
+    -------     -------     -------     -------     -------     -------     -------     -------
+    user enters username ------- valid ——— user enters password  ——— valid —— continue to home page    
+    -------     -------     -------     -------     -------     -------     -------     -------   
+ 
+    SIGN ON:
+           
+      user enters username   ------- username no entry ------ error and show message to enter a username
+      user enters username  ------- username not found ------- error and show message to enter a username
+                      
+      user enters password ------- password no entry ------- error and show message to enter password
+      user enters password ------- password not found -------- error and show message to enter password
+      
+   -------      -------     -------         -------     -------     -------     -------     -------
+    user enters username ------- valid  -------- user enters password ------- valid --------- home page
+   -------      -------     -------     -------     -------     -------     -------     -------     -------             
+
+          
+
+HOME PAGE:
+  
+        event search:
+              
+                 search events by artist  http://eventful.com/events?q=music&
+                 search events by date  http://eventful.com/events?q=music&l=San+Diego&t=9+December+2006
+                 search events by location (zip code or city)  http://eventful.com/events?q=music&l=San+Diego
+                 search similar events
+
+                
+        user search  ————— redirect to social page             
+              
+        click here to see/edit your username, password or delete your profile — redirects to profile page
+
+        click here to edit your calendar ———— redirect to social page
+
+
+
+PROFILE PAGE:
+                             
+       edit profile:  username
+				   password
+				     delete profile
+					
+       to edit calendar or search user ——— redirect to social page
+				
+                  		
+
+SOCIAL PAGE:
+
+      user enters eventful 
+                    user name —— if null —- error message to enter a username
+				    password ——- if null —- error message to enter a password
+
+					username —— if invalid  —  error message “not found. enter a valid username”
+					password —— if invalid —- error message “password incorrect.  enter a valid password”
+
+					username — if valid — enter password
+					password — if valid — continue to social page
+       ____________________________________________________________________________________________
+
+      user search  ——  
+
+		1.  search by username
+		2.  search by events attending
+	
+      edit my calendar  ———
+
+     	1.    see my events
+            http://api.eventful.com/rest/users/calendars/list?app_key=...&owner=eventor
+   		2.    edit my groups
+            http://api.eventful.com/rest/users/groups/list?...&id=
+    	3.    edit my location: 
+	     http://api.eventful.com/rest/users/locales/add?...&id=eventor&locale=
+    	4.    add/edit my events:  
+	     http://api.eventful.com/rest/users/going/add?...&event_id=
+
                   
-        3.       edit profile:  
-                      edit name
-                      add/remove location
-                          http://api.eventful.com/rest/users/locales/add?...&id=eventor&locale=
-                      add/remove evens user plans on attending 
-                           http://api.eventful.com/rest/users/going/add?...&event_id=
-                      
-                      
+      
+
           
                    
        Eventful supports oAuth 1.0 for Eventful API clients to access API resources on behalf of Eventful users.
