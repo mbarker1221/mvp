@@ -38,16 +38,16 @@ HOME PAGE:
         event search:
               
                  search events by artist  http://eventful.com/events?q=music&
-                 search events by date  http://eventful.com/events?q=music&l=San+Diego&t=9+December+2006
-                 search events by location (zip code or city)  http://eventful.com/events?q=music&l=San+Diego
+                 search events by date  http://eventful.com/events?q=music&l=&t=
+                 search events by location (zip code or city)  http://eventful.com/events?q=music&l=
                  search similar events
 
                 
-        user search  ————— redirect to social page             
+        find friends  ————— redirect to social page             
               
-        click here to see/edit your username, password or delete your profile — redirects to profile page
+        click here to edit your username, password or delete your profile — redirects to profile page
 
-        click here to edit your calendar ———— redirect to social page
+        click here to see/edit your calendar ———— redirect to social page
 
 
 
@@ -55,16 +55,16 @@ PROFILE PAGE:
                              
        edit profile:  edit username ----- username no entry ------- error and show message to enter username
        			            ----- username does not meet criteria -------- error and show message to enter 
-                                                                                	a valid username
+                                                                                    a valid username
 											
 		      edit password ----- password no entry ------- error and show message to enter password
         			    ----- password does not meet criteria -------- error and show message to enter 
-                                                                                	a valid password
+                                                                                   a valid password
 											
 		      delete profile  -----  profile delete
 					
        to edit calendar  ——— redirect to social page
-       to search user    --- redirect to social page
+       to search find friends    --- redirect to social page
 				
                   		
 
@@ -81,10 +81,10 @@ SOCIAL PAGE:
 		    password — if valid — continue to social page
        ____________________________________________________________________________________________
 
-      user search  ——  
+      user search  ——  FIND FRIENDS
 
-		1.  search by username
-		2.  search by events attending
+		1.  search by username, name or email: http://api.eventful.com/rest/users/get?...&id=mruser
+		
 	
       edit my calendar  ———
 
