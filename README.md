@@ -53,25 +53,32 @@ HOME PAGE:
 
 PROFILE PAGE:
                              
-       edit profile:  username
-				   password
-				     delete profile
+       edit profile:  edit username ----- username no entry ------- error and show message to enter username
+       			            ----- username does not meet criteria -------- error and show message to enter 
+                                                                                	a valid username
+											
+		      edit password ----- password no entry ------- error and show message to enter password
+        			    ----- password does not meet criteria -------- error and show message to enter 
+                                                                                	a valid password
+											
+		      delete profile  -----  profile delete
 					
-       to edit calendar or search user ——— redirect to social page
+       to edit calendar  ——— redirect to social page
+       to search user    --- redirect to social page
 				
                   		
 
 SOCIAL PAGE:
 
-      user enters eventful 
+      user enters eventful credentials
                     user name —— if null —- error message to enter a username
-				    password ——- if null —- error message to enter a password
+		    password ——- if null —- error message to enter a password
 
-					username —— if invalid  —  error message “not found. enter a valid username”
-					password —— if invalid —- error message “password incorrect.  enter a valid password”
+		    username —— if invalid  —  error message “not found. enter a valid username”
+		    password —— if invalid —- error message “password incorrect.  enter a valid password”
 
-					username — if valid — enter password
-					password — if valid — continue to social page
+		    username — if valid — enter password
+		    password — if valid — continue to social page
        ____________________________________________________________________________________________
 
       user search  ——  
@@ -83,7 +90,7 @@ SOCIAL PAGE:
 
      	1.    see my events
             http://api.eventful.com/rest/users/calendars/list?app_key=...&owner=eventor
-   		2.    edit my groups
+   	2.    edit my groups
             http://api.eventful.com/rest/users/groups/list?...&id=
     	3.    edit my location: 
 	     http://api.eventful.com/rest/users/locales/add?...&id=eventor&locale=
