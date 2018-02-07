@@ -38,7 +38,7 @@ HOME PAGE:
         event search:
               
                  search events by artist  http://eventful.com/events?q=music&
-                 search events by date  http://eventful.com/events?q=music&l=&t=
+                 search events by event name  http://eventful.com/events?q=music&
                  search events by location (zip code or city)  http://eventful.com/events?q=music&l=
                 
                
