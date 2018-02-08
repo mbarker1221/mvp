@@ -1,6 +1,91 @@
 # mvp
 
-SIGN UP/SIGN ON/LANDING PAGE:
+function render sign up page() 
+
+function render sign up form()
+function handle sign-up form()
+
+	user enters username password - on.click()
+function route to tests for validation()
+function perform validation tests()
+	if(error) - alert
+	if validated -
+function perform auth tests()
+	if(error) - alert
+	if auth - create token - return and -
+function render main page()
+
+
+
+	user selects i already have an account  on.click()
+function render sign-in form()
+function handle sign-in form()
+	user enters username password - on.click()
+function route to tests for validation()
+function perform validation tests()
+	if(error) - alert
+	if validated -
+function perform auth tests()
+	if(error) - alert
+	if auth - create token - return and -
+function render main page()
+
+
+	user selects continue as guest
+function render main page()
+
+
+function show/hide()
+function api call return 6 events 
+function render events
+
+function render form()
+
+	user selects event search and enters event name on.click
+function handle event search
+function validate entry
+function api call
+function return data
+function render data
+function clear input 
+	if user enters new data on.click
+function clear results, replace
+
+	user selects artist search and enters event name on.click
+function handle artist search
+function validate entry
+function api call
+function return data
+function render data
+function clear input
+	if user enters new data on.click
+function clear results, replace
+
+	user selects location search and enters event name on.click
+function handle location search
+function validate entry
+function api call
+function return data
+function render data
+function clear input
+	if user enters new data on.click
+function clear results, replace
+
+
+	
+function render sidebar()
+function edit profile()
+function delete profile()
+
+function user search()
+function render form()
+function seed db()
+function api call and return users()
+function render data()
+		
+		
+		
+
 ----------------------
 
       short description of the site and instructions to sign up/sign in below
