@@ -122,8 +122,8 @@ HOME PAGE:
   
         event search:
               
-                 search events by artist  http://eventful.com/events?q=music&
-                 search events by event name  http://eventful.com/events?q=music&
+              
+                 search events events http://eventful.com/events?q=music
                  search events by location (zip code or city)  http://eventful.com/events?q=music&l=
                 
                
@@ -131,33 +131,14 @@ HOME PAGE:
 	find friends --- redirects to social page
 
 
-PROFILE PAGE:
-                             
-       edit profile:  edit username ----- username no entry ------- error and show message to enter username
-       			            ----- username does not meet criteria -------- error and show message to enter 
-                                                                                    a valid username
-											
-		      edit password ----- password no entry ------- error and show message to enter password
-        			    ----- password does not meet criteria -------- error and show message to enter 
-                                                                                   a valid password
-											
-		      delete profile  -----  profile delete
-					
+
        		      see my events
             			http://api.eventful.com/rest/users/calendars/list?app_key=...&owner=eventor
    	
-    		      add/edit my events:  
+    		     :  
 		     		http://api.eventful.com/rest/users/going/add?...&event_id=
                   		
 
-SOCIAL PAGE:
-
-      
-      
-      user search  ——  FIND FRIENDS
-
-		1.  search by username, name or email: http://api.eventful.com/rest/users/get?...&id=mruser
-		
 	
  
        
