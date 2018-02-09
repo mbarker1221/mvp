@@ -1,156 +1,150 @@
 # mvp
 
+USERS CAN SEARCH FOR EVENTS
+
+USERS CAN SAVE EVENTS THEY ARE INTERESTED IN
+
+USERS CAN VIEW THEIR SAVED EVENTS
+
+USERS CAN VIEW WHO ELSE IS INTERESTED IN THEIR SAVED EVENTS
+
+    to do:
+       1. create db with test users
+            user = username 
+                   password - hashed
+                   email
+                   myEvents
+        2. everything else
+         
+                   
+                   
+                    
+
+
+
 function render sign up page() 
 
 function render sign up form()
-function handle sign-up form()
 
-	user enters username password - on.click()
-function route to tests for validation()
-function perform validation tests()
-	if(error) - alert
-	if validated -
-function perform auth tests()
-	if(error) - alert
-	if auth - create token - return and -
-function render main page()
-
-
-
-	user selects i already have an account  on.click()
-function render sign-in form()
-function handle sign-in form()
-	user enters username password - on.click()
-function route to tests for validation()
-function perform validation tests()
-	if(error) - alert
-	if validated -
-function perform auth tests()
-	if(error) - alert
-	if auth - create token - return and -
-function render main page()
+	(user enters username - on.click())
+      function validate un()
+		possible outcomes: (tests)
+			password taken
+			password invalid format
+			password null
+			password not trimmed
+		password valid
+     (user enters password) 
+	   function validate pass()
+        possible outcomes: (tests)
+            password too long
+            password too short
+            password null
+            password valid
+	            if valid input - auth password 
+                    create token - return - create secret hash - return
+                    password authorized - function render main page()
 
 
-	user selects continue as guest
-function render main page()
+    (user selects i already have an account  on.click())
+       function render sign-in form()  
+	(user enters username - on.click())
+       function make api call to db()
+       function validate un() 
+		possible outcomes: (tests)
+			username not found
+			username null
+			username valid
+     (user enters password) 
+	   function validate pass()
+        possible outcomes: (tests)
+            password not found
+			password null
+			password valid
+	            
+            if valid input - function auth password() (test)
+                    create token - return - create secret hash - return
+                         if auth - function render main page()
+
+    (user selects continue as guest)
+        function render main page()
 
 
-function show/hide()
-function api call return 6 events 
-function render events
+function show/hide() (show main page/hide sign up/sign in)
 
-function render form()
-
-	user selects event search and enters event name on.click
-function handle event search
-function validate entry
-function api call
-function return data
-function render data
-function clear input 
-	if user enters new data on.click
-function clear results, replace
-
-	user selects artist search and enters event name on.click
-function handle artist search
-function validate entry
-function api call
-function return data
-function render data
-function clear input
-	if user enters new data on.click
-function clear results, replace
-
-	user selects location search and enters event name on.click
-function handle location search
-function validate entry
-function api call
-function return data
-function render data
-function clear input
-	if user enters new data on.click
-function clear results, replace
-
-
-	
-function render sidebar()
-function edit profile()
-function delete profile()
-
-function user search()
-function render form()
-function seed db()
-function api call and return users()
-function render data()
-		
-		
-		
-
-----------------------
-
-      short description of the site and instructions to sign up/sign in below
-
-    CONTINUE AS GUEST ————————————————————————————————— direct to home page                    
+    function render form()
+        (user selects event search and enters event name on.click)
+            function handle event search()
+                function validate entry() (tests)
+                    possible outcomes:
+                        entry null
+                        entry not found
+                        entry valid
                      
-    SIGN UP:
-  
-        user enters username   ------ username no entry ------               error message enter a username
-        user enters username  ------- username does not meet criteria ------- error message enter valid username																 
-                      
-        user enters password ------- password no entry -------                error message enter valid password
-        user enters password ------- password does not meet criteria -------- error message enter valid password
-                                                                                
-   
-    user enters username ----- valid ——--— user enters password --——— valid —--- continue to home page    
-    
- 
-    SIGN ON:
-           
-      user enters username   ------ username no entry ------  error message enter valid username
-      user enters username  ------- username not found ------- error message enter valid username
-                      
-      user enters password ------- password no entry -------   error message enter valid password
-      user enters password ------- password not found -------- error message enter valid password
-      
-   
-    user enters username ------- valid  -------- user enters password ------- valid --------- home page
-        
-
-          
-
-HOME PAGE:
-  
-        event search:
-              
-              
-                 search events events http://eventful.com/events?q=music
-                 search events by location (zip code or city)  http://eventful.com/events?q=music&l=
-                
-               
-        click here to edit your username, password or delete your profile — redirects to profile page
-	find friends --- redirects to social page
+                    function clear input() 
+                    
+                    function make get request to eventful api()
+                    function return data()
+                    function show results()
+                   
+                   function save event() mark user as interested in event
+                        function create variable myEvents()
+                        function save myEvents to db()
+	                function reset event listener()
 
 
+	(user selects artist search and enters artist name on.click)
+           function handle artist search()
+            function validate entry() (tests)
+                    possible outcomes:
+                        entry null
+                        entry not found
+                        entry valid 
+                        
+                        function clear input() 
+                        
+                        function make get request to eventful api()                           
+                        function return data()
+                        function show results()
+                   
+	                function reset event listener()
+                        
+            
+     (user selects location search and enters event name on.click)
+            function handle location search()
+            function validate entry() (tests)
+                    possible outcomes:
+                        entry null
+                        entry not found
+                        entry valid 
+                        
+                        function clear input() 
+                        
+                        function make get request to eventful api()                           
+                        function return data()
+                        function show results()
+                   
+	                function reset event listener()
+                        
 
-       		      see my events
-            			http://api.eventful.com/rest/users/calendars/list?app_key=...&owner=eventor
-   	
-    		     :  
-		     		http://api.eventful.com/rest/users/going/add?...&event_id=
-                  		
+       (user selects user search and enters user name on.click)
+            function handle user search()
+                function validate entry() (tests)
+                    possible outcomes:
+                        entry null
+                        entry not found
+                        entry valid 
+                        
+                        function clear input() 
+                        function reset event listener()
+                        function make get request to db()
+                        
+                            function seed db()
+                            function return data()
+                            function render data()
+		
+		
+		
 
-	
- 
+
        
-                Request Token
-                POST http://eventful.com/oauth/request_token
-                Authorize Request Token
-                GET http://eventful.com/oauth/authorize
-                Access Token
-                POST http://eventful.com/oauth/access_token
-                   
-                   
-                   
-                
-
-    
