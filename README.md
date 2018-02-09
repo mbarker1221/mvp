@@ -85,7 +85,8 @@ function show/hide() (show main page/hide sign up/sign in)
                     
                     function make get request to eventful api()
                     function return data()
-                    function show results()
+                    function show results(event)
+		  
                    
                    function save event() mark user as interested in event
                         function create variable myEvents()
@@ -105,7 +106,8 @@ function show/hide() (show main page/hide sign up/sign in)
                         
                         function make get request to eventful api()                           
                         function return data()
-                        function show results()
+                        function render results(event)
+			
                    
 	                function reset event listener()
                         
@@ -122,7 +124,8 @@ function show/hide() (show main page/hide sign up/sign in)
                         
                         function make get request to eventful api()                           
                         function return data()
-                        function show results()
+                        function show results(event page)
+			function render event page()
                    
 	                function reset event listener()
                         
@@ -140,8 +143,11 @@ function show/hide() (show main page/hide sign up/sign in)
                         function make get request to db()
                         
                             function seed db()
-                            function return data()
-                            function render data()
+                            function return user data()
+                            function dispaly user data()
+			    
+			    
+			    
 		
 		
 		
