@@ -26,29 +26,45 @@ function render sign up page()
 
 function render sign up form()
 
-	(user enters username - on.click())
+(user enters username - on.click())
       function validate un()
 		possible outcomes: (tests)
 			password taken
-			password invalid format
+			password invalid format      
 			password null
 			password not trimmed
-		password valid
+			
+		username valid
+		function create user(id, username)  CREATE - api post call to db
+		function create id()
+		function store id, username()
+		
+		
      (user enters password) 
 	   function validate pass()
         possible outcomes: (tests)
             password too long
             password too short
             password null
+	    
             password valid
-	            if valid input - auth password 
+	            auth password 
                     create token - return - create secret hash - return
-                    password authorized - function render main page()
+                    password authorized -
+		    
+		    function update user()      GET/UPDATE
+		    function fetch user()
+		    function add hashed password to user()
+		    function save user()
+		    function store user info in db()
+		    
+		    function render main page()
 
-
-    (user selects i already have an account  on.click())
+(user selects i already have an account  on.click())
+    
        function render sign-in form()  
-	(user enters username - on.click())
+       
+ (user enters username - on.click())
        function make api call to db()
        function validate un() 
 		possible outcomes: (tests)
@@ -66,7 +82,7 @@ function render sign up form()
                     create token - return - create secret hash - return
                          if auth - function render main page()
 
-    (user selects continue as guest)
+(user selects continue as guest)
         function render main page()
 
 
